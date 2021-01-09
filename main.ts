@@ -35,13 +35,14 @@ while (true) {
     })
     if (num == 0) {
         basic.clearScreen()
-        basic.showString("You win!")
+        basic.showIcon(IconNames.Heart)
         break
     }
     
     if (num < 0) {
         basic.clearScreen()
-        basic.showString("You lose! :(")
+        basic.showString("X")
+        break
     }
     
 }

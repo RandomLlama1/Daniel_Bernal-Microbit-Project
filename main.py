@@ -41,10 +41,11 @@ while True:
     
     if num == 0:
         basic.clear_screen()
-        basic.show_string("You win!")
+        basic.show_icon(IconNames.HEART)
         break
     if num < 0:
         basic.clear_screen()
-        basic.show_string("You lose! :(")
+        basic.show_string("X")
+        break
 
 
