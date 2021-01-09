@@ -1,35 +1,45 @@
 num = randint(1,20)
- 
+
+chance = randint(1,3)
+
+def on_button_pressed_ab():
+    global num
+    global chance
+    if chance == 1:
+        num = num - 10
+        return num
+    elif chance == 2:
+        num = num - 5
+        return num
+    else: 
+        num = num + 1
+        return num
+
 def on_button_pressed_a():
     global num
     num = num-2
-    basic.show_number(num)
     return num
- 
+
 def on_button_pressed_b():
     global num
     num = num-1
-    basic.show_number(num)
-    return num 
+    return num
 
-def victory():
-    if num == 0:
-        basic.show_string("You win!")
-        basic.show_icon(IconNames.HEART)
-    if num < 0:
-        basic.show_string("You lose :(")
-if input.is_gesture(Gesture.Shake):
+
+
+while True:
     basic.show_number(num)
-'''
-def on_forever():
+    input.on_button_pressed(Button.A, on_button_pressed_a)
+    input.on_button_pressed(Button.B, on_button_pressed_b)
+    input.on_button_pressed(Button.AB, on_button_pressed_ab)
+    basic.clear_screen()
+    
     if num == 0:
+        basic.clear_screen()
+        basic.show_string("You win!")
         break
-    elif num > 0:
-        break
-basic.forever(on_forever)
-'''
-input.on_button_pressed(Button.A, on_button_pressed_a)
-input.on_button_pressed(Button.B, on_button_pressed_b)
- 
+    if num < 0:
+        basic.clear_screen()
+        basic.show_string("You lose! :(")
 
 
