@@ -1,5 +1,5 @@
 num = randint(1,20)
-
+chance2 = randint(1,2)
 chance = randint(1,3)
 
 def on_button_pressed_ab():
@@ -21,15 +21,25 @@ def on_button_pressed_a():
     basic.clear_screen()
     basic.pause(10)
     global num
-    num = num-2
-    return num
+    global chance2
+    if chance2 == 1:
+        num = num-2
+        return num
+    else:
+        num = num-4
+        return num
 
 def on_button_pressed_b():
     basic.clear_screen()
     basic.pause(10)
     global num
-    num = num-1
-    return num
+    global chance2
+    if chance2 == 1:
+        num = num-1
+        return num
+    else:
+         num = num-2
+         return num
 
 
 

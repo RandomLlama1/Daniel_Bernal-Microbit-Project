@@ -1,4 +1,5 @@
 let num = randint(1, 20)
+let chance2 = randint(1, 2)
 let chance = randint(1, 3)
 while (true) {
     basic.showNumber(num)
@@ -6,15 +7,29 @@ while (true) {
         basic.clearScreen()
         basic.pause(10)
         
-        num = num - 2
-        return num
+        
+        if (chance2 == 1) {
+            num = num - 2
+            return num
+        } else {
+            num = num - 4
+            return num
+        }
+        
     })
     input.onButtonPressed(Button.B, function on_button_pressed_b(): number {
         basic.clearScreen()
         basic.pause(10)
         
-        num = num - 1
-        return num
+        
+        if (chance2 == 1) {
+            num = num - 1
+            return num
+        } else {
+            num = num - 2
+            return num
+        }
+        
     })
     input.onButtonPressed(Button.AB, function on_button_pressed_ab(): number {
         basic.clearScreen()
