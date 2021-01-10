@@ -48,7 +48,6 @@ while True:
     input.on_button_pressed(Button.A, on_button_pressed_a)
     input.on_button_pressed(Button.B, on_button_pressed_b)
     input.on_button_pressed(Button.AB, on_button_pressed_ab)
-    
     if num == 0:
         basic.clear_screen()
         basic.show_icon(IconNames.HEART)
@@ -57,5 +56,4 @@ while True:
         basic.clear_screen()
         basic.show_string("X")
         break
-
 
